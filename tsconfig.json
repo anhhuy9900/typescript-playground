@@ -1,0 +1,26 @@
+{
+   "compilerOptions": {
+     "module": "commonjs",
+     "esModuleInterop": true,
+     "target": "es6",
+     "noImplicitAny": true,
+     "moduleResolution": "node",
+     "sourceMap": true,
+     "baseUrl": ".",
+     "paths": {
+        "*": [
+           "node_modules/*"
+        ]
+     },
+     "emitDecoratorMetadata": true,
+     "experimentalDecorators": true,
+     "preserveConstEnums": true,
+     "strictPropertyInitialization": false,
+     "strictNullChecks": true,
+     "allowJs": true,
+     "outDir": "./dist/",
+     "rootDir": "."
+   },
+   //"include": ["**/*.ts"],
+   "exclude": ["node_modules"]
+ }
