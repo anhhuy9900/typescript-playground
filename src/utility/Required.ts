@@ -12,13 +12,13 @@ function hireActor(character: Required<MovieCharacter>) {}
 
 // 👍
 hireActor({
-  firstname: "Frodo",
-  name: "Baggins",
+  firstname: "Huy",
+  name: "Test",
   movie: "The Lord of the Rings",
 });
 
 // 👎
 hireActor({
-  firstname: "Frodo",
-  name: "Baggins",
+  firstname: "Huy",
+  name: "Test",
 });
