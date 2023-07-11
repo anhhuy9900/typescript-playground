@@ -11,5 +11,5 @@ type MovieCharacters =
 type hpCharacters = Extract<MovieCharacters, string>;
 // equal to type hpCharacters = 'Harry Potter' | 'Tom Riddle';
 
-type hpCharacters = Extract<MovieCharacters, { firstname: string }>;
+type hpCharacters2 = Extract<MovieCharacters, { firstname: string }>;
 // equal to type hpCharacters = {firstname: string; name: string };
