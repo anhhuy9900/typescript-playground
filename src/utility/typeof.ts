@@ -11,6 +11,7 @@ function getInfo() {
 }
 
 type NewType = ReturnType<typeof getInfo>;
+
 /*
 NewType will be 
 type NewType = {
