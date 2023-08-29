@@ -1,3 +1,7 @@
+/**
+ * Constructs a type with all properties of Type set to readonly, meaning the properties of the constructed type cannot be reassigned.
+ */
+
 type Product = {
     name: string;
     price: number;

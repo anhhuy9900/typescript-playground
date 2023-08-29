@@ -16,11 +16,6 @@ function serializeJSON(value: any, options?: SerializationOptions) {
     return JSON.stringify(value, null, indent);
 }
 
-const sUser = {
-  name: "Marius Schulz",
-  twitter: "mariusschulz",
-};
-
 const json = serializeJSON(user, {
     formatting: {
       getIndent: () => 2,
@@ -38,5 +33,4 @@ type ResponseData = {
       msg: string
     }
   },
-
 }

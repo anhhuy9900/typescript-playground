@@ -17,4 +17,5 @@ const userManager: UserManagerInstanceType = new UserManager({
     name: 'John',
     surname: 'Doe',
 });
-console.log(userManager.name);
+console.log(userManager);
+// UserManager { name: 'John', surname: 'Doe' }

@@ -1,3 +1,7 @@
+/**
+ * Let’s develop our sample further. Here we use an interface that describes objects 
+ * 
+ */
 interface JSONFunc extends Response {
     version: number;
 
@@ -20,4 +24,12 @@ interface JSONFunc extends Response {
 
     //Tell TS that a property can not be changed
     readonly number: number;
+}
+
+
+// this interface call is freeze interface
+interface ImmutableInterface {
+    readonly title: string;
+    readonly subject: string;
+    readonly object: string;
 }

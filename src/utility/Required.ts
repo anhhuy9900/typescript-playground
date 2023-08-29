@@ -3,7 +3,7 @@
  */
 
 interface MovieCharacter {
-  firstname?: string;
+  firstName?: string;
   name?: string;
   movie?: string;
 }
@@ -12,7 +12,7 @@ function hireActor(character: Required<MovieCharacter>) {}
 
 // 👍
 hireActor({
-  firstname: "Huy",
+  firstName: "Huy",
   name: "Test",
   movie: "The Lord of the Rings",
 });

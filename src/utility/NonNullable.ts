@@ -1,4 +1,5 @@
 // NonNullable<T>
+// Constructs a type by excluding null and undefined from Type.
 // It allows you to remove null and undefined from the type T.
 type NonNullableType = string | number | null | undefined;
 

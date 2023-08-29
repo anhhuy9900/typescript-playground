@@ -20,11 +20,7 @@ age = 25;
 age = "25";
 type Unit = "px" | "vh" | "vw";
 
-//unknown
-let unk: unknown = 4;
-unk = "maybe a string";
-// OK, definitely a boolean
-unk = false;
+
 
 // any
 // not all type information is available or its declaration would take an inappropriate amount of effort
@@ -101,6 +97,12 @@ let moreNumbers: ReadonlyArray<number> = numbers;
 // numbers = moreNumbers; // Error, mutating methods are missing
 
 
+// ------------------- Union types ------------------- //
+type unTypeA = 'Type A';
+type unTypeB = 'Type B';
+// type UnionType = "Type A" | "Type B"
+type UnionType =  unTypeA | unTypeB;
+
 // Tagged Union Types for modelling state that can be in one of many shapes
 type State = 
   | { type: "loading" }
@@ -112,3 +114,33 @@ if (state.type === "success") {
 } else if (state.type === "error") {
   console.error(state.message);
 }
+
+
+// ------------------- Combine types ------------------- //
+type comTypeA = 'Type A';
+type comTypeB = 'Type B';
+// combineTypes = "Type A" | "Type B"
+type combineTypes =  comTypeA | comTypeB;
+
+
+// ------------------- Literal types ------------------ //
+let sizes: 10 | 20 | 30 = 30;
+let colors: "White" | "Black" | "Red" = 'Black';
+
+
+
+// ------------------- unknown types ------------------- //
+// when you defined unknown for a variable and then you can assign any types for it
+let unknownVal: unknown;
+unknownVal = "maybe a string";
+unknownVal = 1;
+unknownVal = false;
+unknownVal = [];
+unknownVal = {};
+unknownVal = null;
+unknownVal = undefined;
+
+// But you can't assign the value of unknown for any variable with difference types, for example
+// let uString: string = unknownVal;
+// let uNumber: number = unknownVal;
+// let uBoolean: boolean = unknownVal;

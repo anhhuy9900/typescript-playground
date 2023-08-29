@@ -1,4 +1,8 @@
-// ReturnType constructs a type of the return type of the function Type:
+/**
+ * ReturnType constructs a type of the return type of the function Type
+ * Constructs a type consisting of the return type of function Type.
+ */
+
 const getUserReturn = () => {
     return {
         name: 'John',

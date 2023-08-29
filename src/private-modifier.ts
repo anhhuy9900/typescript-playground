@@ -14,7 +14,16 @@ class Counter {
   counter.increment();
   counter.increment();
   counter.increment();
-  // change value for private property in class
+
+  //increment -> _value:  3
+  // error TS2341: Property '_value' is private and only accessible within class 'Counter'.
+  console.log('increment -> _value: ', counter.count);
+
+  // we can't change value fo priavte property
+  // counter._value = 100; 
+
+  // but we can change value for private property in class -> use this way
   counter["_value"] = -100;
   
-  console.log(counter.count);
+  // _value : -100
+  console.log('_value :', counter.count);
