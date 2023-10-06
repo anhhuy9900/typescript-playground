@@ -38,3 +38,17 @@ const exUserInfo: Exclude<ExUserInfo, IExUserInfoB> = {
 }
 
 console.log('exUserInfo: ', exUserInfo);
+
+
+// EXAMPLE 3
+interface Water { healthiness: 1000 }
+interface Lemonade { healthiness: 500 }
+interface Tea { healthiness: 1250 } // really it depends on what kind of tea
+
+interface Soda { healthiness: -1000 }
+interface Coke extends Soda { fizziness: 1000 }
+interface DrPepper extends Soda { fizziness: 800 }
+interface Pepsi extends Soda { fizziness: 750 }
+
+type Drinks = Water | Lemonade | Tea | Soda | Coke | DrPepper | Pepsi;
+type NoGenericSodaBad = Exclude<Drinks, Soda> | Coke | DrPepper | Pepsi;

@@ -32,3 +32,4 @@ function doSomething(arg: FirstA | SecondB) {
     }
 }
 
+
