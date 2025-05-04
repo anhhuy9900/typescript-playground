@@ -18,7 +18,17 @@ hireActor({
 });
 
 // 👎
-hireActor({
-  firstname: "Huy",
-  name: "Test",
-});
+// hireActor({
+//   firstname: "Huy",
+//   name: "Test",
+// });
+
+
+// Other Required Types
+interface  Properties {
+  a?: number;
+  b?: string;
+}
+const  object: Properties = { a:  5 };
+// ERROR: Property 'b' is missing in type '{ a: number; }' but required in type 'Required<Properties>'.
+// const  object2: Required<Properties> = { a:  5 };

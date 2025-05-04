@@ -7,3 +7,10 @@ const arrNumber: ReadonlyArray<number> = [1, 2, 3];
 // Error -> Property push does not exist on type readonly number[]
 // arrNumber.push(4);
 
+// 
+interface Point {
+    x: number;
+    y: number;
+}
+
+type ReadonlyPoint = Readonly<Point>;
